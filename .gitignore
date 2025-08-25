@@ -1,0 +1,7 @@
+node_modules
+.idea/*
+!.idea/runConfigurations
+!.idea/vcs.xml
+!.idea/modules.xml
+!.idea/compiler.xml
+!.idea/*.iml
