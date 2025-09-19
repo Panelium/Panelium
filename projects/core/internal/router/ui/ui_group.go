@@ -7,6 +7,6 @@ import (
 )
 
 func AttachUIRouterGroup(r *gin.Engine) {
-	uiGroup := r.Group("/ui")
+	uiGroup := r.Group("/")
 	uiGroup.GET("/", ui_routes.HandleIndexGET)
 }
