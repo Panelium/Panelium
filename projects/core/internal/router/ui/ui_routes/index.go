@@ -1,5 +1,11 @@
 package ui_routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
 
-func HandleIndexGET(ctx *gin.Context) {}
+	"github.com/gin-gonic/gin"
+)
+
+func HandleIndexGET(ctx *gin.Context) {
+	ctx.String(http.StatusOK, "hello world")
+}
