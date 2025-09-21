@@ -1,7 +1,9 @@
 {
   "tasks": {
     "uno": "unocss --minify",
-    "uno:watch": "unocss --minify --watch"
+    "uno:watch": "unocss --minify --watch",
+    "templ": "go tool templ generate --path ./internal/dashboard/views/",
+    "templ:watch": "go tool templ generate --path ./internal/dashboard/views/ --watch"
   },
   "nodeModulesDir": "none",
   "imports": {
