@@ -1,6 +1,6 @@
 package main
 
-import "panelium/core/internal/router"
+import "panelium/core/internal/server/router"
 
 func main() {
 	r := router.Init()
