@@ -10,3 +10,8 @@
 - [HTMX](https://htmx.org) - Frontend
 - [Templ](https://templ.guide) - Reusable frontend components
 - [UnoCSS](https://unocss.dev) - CSS Utility Classes
+
+# Developing
+
+- Install [Gowebly](https://gowebly.org/)
+- Run with `gowebly run`
