@@ -1,0 +1,91 @@
+package layouts
+
+import (
+	"github.com/guillembonet/go-templ-htmx/views"
+)
+
+const (
+	defaultTitle = "Default title"
+)
+
+templ Base(title, description string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>{ getTitle(title) }</title>
+			<link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" hx-preserve="true"/>
+			<meta charset="UTF-8" hx-preserve="true"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" hx-preserve="true"/>
+			@descriptionMeta(description)
+			<script src="/static/js/vendor/htmx.min.js" hx-preserve="true"></script>
+			<link href="/static/css/vendor/uno.min.css" rel="stylesheet" hx-preserve="true"/>
+			<link href="/static/css/styles.css" rel="stylesheet" hx-preserve="true"/>
+			<script hx-preserve="true">
+				if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+					document.documentElement.classList.add('dark')
+				} else {
+					document.documentElement.classList.remove('dark')
+				}
+
+				function toggleTheme() {
+					let theme = localStorage.theme === 'dark' ? 'light' : 'dark'
+					if (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'
+					}
+
+					localStorage.theme = theme
+					document.documentElement.classList.toggle('dark', theme === 'dark')
+				}
+
+				function isServerError(request) {
+					return request.status >= 400
+				}
+
+				function handleServerError(event) {
+					if (isServerError(event.detail.xhr)) {
+						event.detail.shouldSwap = true
+						event.detail.isError = false
+					}
+				}
+			</script>
+		</head>
+		<body class="antialiased min-h-screen flex flex-col" hx-ext="head-support">
+			// @components.Navigation()
+			<div
+				id="content"
+				class={ "flex flex-grow" + views.DefaultBackgroundClass }
+				hx-on:htmx:before-swap="handleServerError(event)"
+				hx-on:htmx:send-error="console.error('A network error occurred')"
+			>
+				{ children... }
+			</div>
+			// @components.Footer()
+		</body>
+	</html>
+}
+
+templ WithBase(component templ.Component, title, description string, fullPage bool) {
+	if fullPage {
+		@Base(title, description) {
+			@component
+		}
+	} else {
+		<head hx-head="merge">
+			<title>{ getTitle(title) }</title>
+			@descriptionMeta(description)
+		</head>
+		@component
+	}
+}
+
+templ descriptionMeta(description string) {
+	if description != "" {
+	}
+}
+
+func getTitle(title string) string {
+	if title == "" {
+		return defaultTitle
+	}
+	return title
+}

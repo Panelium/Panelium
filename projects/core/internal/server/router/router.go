@@ -3,6 +3,7 @@ package router
 import (
 	"net/http"
 	"panelium/core/internal/dashboard/static"
+	"panelium/core/internal/server/router/ui_routes"
 	"panelium/core/internal/server/templ"
 
 	"github.com/gin-gonic/gin"
@@ -14,6 +15,8 @@ func Init() *gin.Engine {
 	r.StaticFS("/static", http.FS(static.Static))
 
 	r.HTMLRender = &templ.Renderer{}
+
+	ui_routes.Attach(r)
 
 	return r
 }
