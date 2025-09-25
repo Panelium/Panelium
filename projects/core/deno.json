@@ -8,6 +8,7 @@
   "nodeModulesDir": "none",
   "imports": {
     "@unocss/cli": "npm:@unocss/cli@^66.5.1",
+    "@unocss/preset-wind3": "npm:@unocss/preset-wind3@^66.5.2",
     "unocss": "npm:unocss@^66.5.1"
   }
 }
