@@ -1,14 +1,8 @@
-import {defineConfig} from "unocss";
-import presetWind3 from "npm:@unocss/preset-wind3";
+import {defineConfig, presetWind3} from 'unocss'
 
 export default defineConfig({
-    presets: [
-        presetWind3(),
-    ],
-    cli: {
-        entry: {
-            patterns: ["./internal/dashboard/views/**/*.{html,templ,go}"],
-            outFile: "./internal/dashboard/static/css/vendor/uno.min.css",
-        },
+    content: {
+        filesystem: ['**/*.{html,templ}'],
     },
-});
+    presets: [presetWind3()],
+})

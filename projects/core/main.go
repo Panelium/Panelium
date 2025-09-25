@@ -1,12 +1,13 @@
 package main
 
-import "panelium/core/internal/server/router"
+import (
+	"log/slog"
+	"os"
+)
 
 func main() {
-	r := router.Init()
-
-	err := r.Run()
-	if err != nil {
-		panic(err) //TODO: error handling
+	if err := runServer(); err != nil {
+		slog.Error("Failed to start server!", "details", err.Error())
+		os.Exit(1)
 	}
 }

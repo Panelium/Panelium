@@ -1,0 +1,140 @@
+*, :before, :after, ::backdrop {
+    --un-rotate: 0;
+    --un-rotate-x: 0;
+    --un-rotate-y: 0;
+    --un-rotate-z: 0;
+    --un-scale-x: 1;
+    --un-scale-y: 1;
+    --un-scale-z: 1;
+    --un-skew-x: 0;
+    --un-skew-y: 0;
+    --un-translate-x: 0;
+    --un-translate-y: 0;
+    --un-translate-z: 0;
+    --un-pan-x: ;
+    --un-pan-y: ;
+    --un-pinch-zoom: ;
+    --un-scroll-snap-strictness: proximity;
+    --un-ordinal: ;
+    --un-slashed-zero: ;
+    --un-numeric-figure: ;
+    --un-numeric-spacing: ;
+    --un-numeric-fraction: ;
+    --un-border-spacing-x: 0;
+    --un-border-spacing-y: 0;
+    --un-ring-offset-shadow: 0 0 #0000;
+    --un-ring-shadow: 0 0 #0000;
+    --un-shadow-inset: ;
+    --un-shadow: 0 0 #0000;
+    --un-ring-inset: ;
+    --un-ring-offset-width: 0px;
+    --un-ring-offset-color: #fff;
+    --un-ring-width: 0px;
+    --un-ring-color: #93c5fd80;
+    --un-blur: ;
+    --un-brightness: ;
+    --un-contrast: ;
+    --un-drop-shadow: ;
+    --un-grayscale: ;
+    --un-hue-rotate: ;
+    --un-invert: ;
+    --un-saturate: ;
+    --un-sepia: ;
+    --un-backdrop-blur: ;
+    --un-backdrop-brightness: ;
+    --un-backdrop-contrast: ;
+    --un-backdrop-grayscale: ;
+    --un-backdrop-hue-rotate: ;
+    --un-backdrop-invert: ;
+    --un-backdrop-opacity: ;
+    --un-backdrop-saturate: ;
+    --un-backdrop-sepia:
+}
+
+:root {
+    color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fefef5;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5
+}
+
+a {
+    color: #646cff;
+    text-decoration: inherit;
+    font-weight: 500
+}
+
+a:hover {
+    color: #535bf2
+}
+
+body {
+    color: #242424;
+    background-color: #fefef5;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    display: flex
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1
+}
+
+#app {
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem
+}
+
+#htmx-result {
+    padding: 2rem 0
+}
+
+.logo {
+    will-change: filter;
+    filter: drop-shadow(0 0 2em #f3c077aa);
+    height: 12em;
+    padding: 2em;
+    transition: filter .3s;
+    display: inline
+}
+
+.content {
+    padding: 2em
+}
+
+.read-the-docs {
+    color: #888
+}
+
+button {
+    color: #fefef5;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    border: 1px solid #0000;
+    border-radius: 8px;
+    padding: .6em 1.2em;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 500;
+    transition: border-color .25s
+}
+
+button:hover {
+    border-color: #646cff
+}
+
+button:focus, button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color
+}
+
+/*# sourceMappingURL=styles.css.map */
