@@ -26,12 +26,7 @@
     "rules": {
       "recommended": false
     },
-    "includes": [
-      "**",
-      "!dist",
-      "**",
-      "!dist"
-    ]
+    "includes": ["**", "!dist", "**", "!dist"]
   },
   "javascript": {
     "formatter": {
@@ -54,9 +49,7 @@
   },
   "overrides": [
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "complexity": {
@@ -124,9 +117,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "javascript": {
         "globals": []
       }
@@ -177,9 +168,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "complexity": {
@@ -206,9 +195,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "correctness": {
@@ -219,17 +206,13 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {}
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "javascript": {
         "globals": [
           "onanimationend",
@@ -361,9 +344,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "complexity": {
@@ -432,9 +413,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "javascript": {
         "globals": []
       }
@@ -488,9 +467,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "complexity": {
@@ -523,9 +500,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "correctness": {
@@ -536,9 +511,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "linter": {
         "rules": {
           "style": {
@@ -548,9 +521,7 @@
       }
     },
     {
-      "includes": [
-        "**/*.{ts,tsx}"
-      ],
+      "includes": ["**/*.{ts,tsx}"],
       "javascript": {
         "globals": [
           "onanimationend",
