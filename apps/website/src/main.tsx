@@ -1,7 +1,7 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+import Home from './Home.tsx'
 import {BrowserRouter, Route, Routes} from "react-router";
 import NotFound from "./NotFound.tsx"
 
@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <Routes>
                 <Route path='*' element={<NotFound/>}/>
-                <Route path='/' element={<App/>}/>
+                <Route path='/' element={<Home/>}/>
             </Routes>
         </BrowserRouter>
     </StrictMode>,
