@@ -3,6 +3,10 @@
   "version": "dev",
   "private": true,
   "workspaces": [
-    "apps/*"
-  ]
+    "apps/*",
+    "packages/ui"
+  ],
+  "devDependencies": {
+    "lefthook": "^2.0.15"
+  }
 }
