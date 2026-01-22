@@ -1,0 +1,8 @@
+{
+  "name": "panelium-monorepo",
+  "version": "dev",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}
