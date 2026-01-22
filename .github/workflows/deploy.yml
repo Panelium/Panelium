@@ -26,19 +26,19 @@ jobs:
           bun-version: latest
 
       - name: Install Website dependencies
-        working-directory: ./projects/website
+        working-directory: projects/website
         run: bun install
 
       - name: Build React app
-        working-directory: ./projects/website
+        working-directory: projects/website
         run: bun run build
 
       - name: Install Docs dependencies
-        working-directory: ./projects/docs
+        working-directory: projects/docs
         run: bun install
 
       - name: Build VitePress docs
-        working-directory: ./projects/docs
+        working-directory: projects/docs
         run: bun run build
 
       - name: Setup Pages
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./projects/website/dist
+          path: projects/website/dist
 
   deploy:
     environment:
