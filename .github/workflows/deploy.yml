@@ -39,7 +39,7 @@ jobs:
 
       - name: Build VitePress docs
         working-directory: apps/docs
-        run: bun run build
+        run: bun run docs:build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
