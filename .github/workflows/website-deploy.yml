@@ -25,6 +25,17 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Cache Bun dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.bun/install/cache
+            apps/website/node_modules
+            apps/docs/node_modules
+          key: ${{ runner.os }}-bun-${{ hashFiles('apps/website/bun.lock', 'apps/docs/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
       - name: Install Website dependencies
         working-directory: apps/website
         run: bun install
